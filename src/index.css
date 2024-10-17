@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+#headerEl ul li:active{
+  background-color: gray;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+}
