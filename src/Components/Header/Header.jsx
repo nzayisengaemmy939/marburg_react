@@ -33,9 +33,9 @@ function Header() {
             <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/about">About</a></li>
             <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/prevent">Prevent</a></li>
             <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/contact">Contact us</a></li>
-            <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> 
+            {/* <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> 
               <button className='text-[#ffffff] px-6 py-2 bg-[#E42353] rounded-3xl'>Login</button>
-            </li>
+            </li> */}
         </ul>
       </div>
     </div>

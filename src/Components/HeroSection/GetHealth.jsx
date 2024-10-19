@@ -43,8 +43,10 @@ function GetHealthCards() {
       </div>
       <Sympotoms imgEl={true}/>
       <Updates/>
-      <PatientService/>
+      {/* <PatientService/> */}
+
     </div>
+    
   );
 }
 

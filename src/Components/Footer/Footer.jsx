@@ -21,10 +21,10 @@ const Footer = () => {
         <div className="w-full md:w-1/4 mb-8 md:mb-0">
           <h3 className="text-lg font-semibold mb-4">Links</h3>
           <ul className="text-gray-300 text-sm">
-            <li key="home" className="mb-2"><Link to={""} className="hover:text-white">Home</Link></li> {/* Added key prop */}
-            <li key="about" className="mb-2"><Link to={""} className="hover:text-white">About</Link></li> {/* Added key prop */}
-            <li key="prevent" className="mb-2"><Link to={""} className="hover:text-white">Prevent</Link></li> {/* Added key prop */}
-            <li key="contact" className="mb-2"><Link to={""} className="hover:text-white">Contact</Link></li> {/* Added key prop */}
+            <li key="home" className="mb-2"><Link to={"/"} className="hover:text-white">Home</Link></li> {/* Added key prop */}
+            <li key="about" className="mb-2"><Link to={"/about"} className="hover:text-white">About</Link></li> {/* Added key prop */}
+            <li key="prevent" className="mb-2"><Link to={"/prevent"} className="hover:text-white">Prevent</Link></li> {/* Added key prop */}
+            <li key="contact" className="mb-2"><Link to={"/contact"} className="hover:text-white">Contact</Link></li> {/* Added key prop */}
           </ul>
         </div>
         

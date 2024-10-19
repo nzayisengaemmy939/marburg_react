@@ -9,6 +9,7 @@ import Image6 from '../../assets/image6.jpg'
 import Image7 from '../../assets/image7.jpg'
 import Image8 from '../../assets/image8.jpg'
 import Image9 from '../../assets/image9.jpg'
+import BgImage from '../../assets/22.jpg'
 function Prevent() {
   const preventionTips = [ 
     { 
@@ -60,7 +61,16 @@ function Prevent() {
 
   return (
     <div className="w-full pt-24 pb-10">
-      <div className="bg-[#223A66] flex flex-col items-center justify-center text-white py-20">
+      <div className="bg-[#223A66] flex flex-col items-center justify-center text-white py-20"
+       style={{
+        width: "100%",
+       backgroundColor:"#223A66]",
+       backgroundImage: `linear-gradient(rgba(34, 58, 102, 0.9), rgba(34, 58, 102, 0.9)), url(${BgImage})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        // zIndex:"-1"
+      }}>
         <div className="text-xl">Prevent</div>
         <h1 className="text-3xl font-[400]">How To Prevent Marburg Virus</h1>
       </div>

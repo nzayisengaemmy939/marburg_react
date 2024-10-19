@@ -1,8 +1,16 @@
 import React from 'react';
 import symp from '../../assets/sympotoms.png';
+import { useState } from 'react';
+import Health from '../getHealth/Health';
+
 
 function Sympotoms({imgEl}) {
+const [show,showComponent]=useState(false)
+  const getHealth = () => {
+    showComponent(!show);
+  };
   return (
+    
     <div className={`flex flex-wrap w-full ${imgEl===false?"pt-5":"pt-10 "}`}>
       <div className={`flex md:flex-1 w-full justify-center items-center p-10 md:p-20`}>
        {imgEl===true&&( <img src={symp} alt="" className='w-full h-full' />)}
@@ -32,9 +40,10 @@ function Sympotoms({imgEl}) {
             Chest pain
           </li>
           <li className=" mt-3 mb-3">As the disease advances, symptoms can become more severe, including  liver failure, delirium, shock, bleeding (hemorrhaging), and multi-organ dysfunction</li>
-          <li> <button className="py-2 bg-[#E42353] text-white px-8 rounded-2xl">Get Health Services</button></li>
+          <li> <button className="py-2 bg-[#E42353] text-white px-4 rounded-3xl" onClick={getHealth}>Get Health Services</button></li>
         </ul>
       </div>
+      {show&&<Health ></Health>}
     </div>
   );
 }

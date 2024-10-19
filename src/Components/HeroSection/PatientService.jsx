@@ -17,7 +17,7 @@ const DoctorCard = ({ name, description }) => (
 );
 const PatientService = () => {
   return (
-    <div className=" px-8 pt-20">
+    <div className=" px-8 pt-20 bg-[#F4F9FC] w-full">
       <h1 className="text-3xl font-bold text-center  mb-4 text-[#223A66]">
         We served over 5000+ Patients
       </h1>

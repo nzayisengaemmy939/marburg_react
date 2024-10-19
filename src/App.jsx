@@ -6,6 +6,7 @@ import Hero from './Components/HeroSection/Hero';
 import About from './Components/About/About';
 import Prevent from './Components/Prevent/Prevent';
 import Contact from './Components/Contact/Contact';
+import HealthForm from './Components/getHealth/healthForm';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/prevent" element={<Prevent />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/form" element={<HealthForm />} />
+        
         </Routes>
       </main>
       <Footer />
