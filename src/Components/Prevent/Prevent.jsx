@@ -66,7 +66,7 @@ function Prevent() {
       </div>
 
       <div className="w-full max-w-6xl mx-auto bg-white p-6">
-        <h1 className="text-2xl font-bold text-[#223A66] mb-6">How to prevent Marburg</h1>
+        <h1 className="text-2xl font-bold text-[#223A66] mb-6">How to prevent Marburg Well</h1>
 
         {/* Grid Layout for the cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
