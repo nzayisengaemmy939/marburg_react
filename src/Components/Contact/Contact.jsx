@@ -19,10 +19,12 @@ function Contact() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+  const [isLoading,setLoading]=useState(false)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(formData,'data to be transnfered to server')
+    setLoading(true)
     try {
       const frontend = import.meta.env.VITE_BACKEND_URL
       const response = await axios.post(`${frontend}/messages/register`, formData);
@@ -36,6 +38,7 @@ function Contact() {
         phoneNumber: '',
         message: ''
       });
+      setLoading(false)
     } catch (error) {
       console.error('Error submitting form:', error);
       toast.error('Failed to send message. Please try again later.'); // Error toast
@@ -126,12 +129,14 @@ function Contact() {
             required
           ></textarea>
           <div className="w-full flex justify-center">
-            <button
-              type="submit"
-              className="bg-[#223A66] text-white py-2 px-4 rounded-2xl text-sm transition duration-300"
-            >
-              Send Message
-            </button>
+          <button
+  type="submit"
+  className="bg-[#223A66] text-white py-2 px-4 rounded-2xl text-sm transition duration-300"
+  disabled={isLoading} // Correctly set the disabled attribute
+>
+  {isLoading ? 'Sending...' : 'Send Message'} {/* Change button text based on loading state */}
+</button>
+
           </div>
         </form>
       </div>
