@@ -34,4 +34,7 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    outDir: 'build', // Set output directory to 'build'
+  },
 });

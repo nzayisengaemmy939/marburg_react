@@ -93,6 +93,7 @@ const HealthForm = () => {
     setIsLoading(true);
     try {
       const frontend = import.meta.env.VITE_BACKEND_URL
+      console.log(frontend)
       const response = await axios.post(`${frontend}/register`, formData);
       toast.success('Message sent successfully!');
       
@@ -108,11 +109,7 @@ const HealthForm = () => {
     } catch (error) {
       console.error('Error submitting form:nnnn', error);
       toast.error(error);
-    } finally {
-      setIsLoading(false);
-      context.setIsHideSidebarAndHeader(false); // Adjust according to your context
-      navigate("/");
-    }
+    } 
   };
 
   return (
