@@ -28,15 +28,26 @@ function Header() {
         <h1 className=' font-bold text-[30px]'>MarburgCare</h1>
       </div>
       <div className="flex justify-center items-center " id='headerEl'>
-        <ul className='flex justify-center items-center gap-2'>
-            <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/">Home</a></li>
-            <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/about">About</a></li>
-            <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/prevent">Prevent</a></li>
-            <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> <a href="/contact">Contact us</a></li>
-            {/* <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer '> 
-              <button className='text-[#ffffff] px-6 py-2 bg-[#E42353] rounded-3xl'>Login</button>
-            </li> */}
-        </ul>
+      <ul className='flex justify-center items-center gap-2'>
+      <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer'>
+        <Link to="/">Home</Link> {/* Replace <a> with <Link> */}
+      </li>
+      <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer'>
+        <Link to="about">About</Link> {/* Replace <a> with <Link> */}
+      </li>
+      <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer'>
+        <Link to="prevent">Prevent</Link> {/* Replace <a> with <Link> */}
+      </li>
+      <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer'>
+        <Link to="contact">Contact us</Link> {/* Replace <a> with <Link> */}
+      </li>
+      {/* Uncomment this block if you want to use a button for Login */}
+      {/* 
+      <li className='px-3 py-2 font-bold text-[15px] text-[#223A66] cursor-pointer'> 
+        <button className='text-[#ffffff] px-6 py-2 bg-[#E42353] rounded-3xl'>Login</button>
+      </li> 
+      */}
+    </ul>
       </div>
     </div>
   </div>
