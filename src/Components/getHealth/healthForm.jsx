@@ -92,7 +92,8 @@ const HealthForm = () => {
 
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:10000/register', formData);
+      const frontend = import.meta.env.VITE_BACKEND_URL
+      const response = await axios.post(`${frontend}/register`, formData);
       toast.success('Message sent successfully!');
       
       // Reset form data
@@ -208,7 +209,7 @@ const HealthForm = () => {
               className="w-full bg-[#223A66] text-white py-2 px-4 rounded-md hover:bg-[#3d63a8] focus:outline-none focus:ring-2 focus:ring-[#223A66] focus:ring-offset-2"
               disabled={isLoading}
             >
-              {isLoading ? <p><Spinner className="text-white" />Submit</p> : "Submit"}
+              {isLoading ? <p><Spinner className="text-white" /></p> : "Submit"}
             </button>
           </form>
         </div>

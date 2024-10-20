@@ -24,7 +24,8 @@ function Contact() {
     e.preventDefault();
     console.log(formData,'data to be transnfered to server')
     try {
-      const response = await axios.post('http://localhost:10000/messages/register', formData);
+      const frontend = import.meta.env.VITE_BACKEND_URL
+      const response = await axios.post(`${frontend}/messages/register`, formData);
       console.log('Form submitted successfully:', response.data);
       toast.success('Message sent successfully!'); // Success toast
       // Optionally, reset form data
