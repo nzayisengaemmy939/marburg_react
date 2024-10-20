@@ -106,7 +106,7 @@ const HealthForm = () => {
         locationLink: ''
       });
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting form:nnnn', error);
       toast.error(error);
     } finally {
       setIsLoading(false);
